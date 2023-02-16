@@ -1,7 +1,7 @@
 import './InfoComponent.css'
 
 interface Props{
-    contenido:{tema:string, description?:string, items:{name:string, description?:string}[]}
+    contenido:{tema:string, description?:string, items:{name:string, description?:string, icon?:string}[]}
 }
 
 export function InfoComponent({contenido}:Props){
@@ -11,12 +11,15 @@ export function InfoComponent({contenido}:Props){
             <h3>{contenido.description}</h3>
             <ul>
                 {
-                    contenido.items.map(({name, description})=>(
-                        <li key={name}>{name} <span>{description}</span></li>
+                    contenido.items.map(({name, description,icon})=>(
+                        <li key={name}>
+                            {icon&&<img src={icon}></img>}
+                            <h4>{name} </h4>
+                            <span>{description}</span>
+                        </li>
                     ))     
                 }
             </ul>
-
         </section>
     )
 }

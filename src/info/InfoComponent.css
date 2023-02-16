@@ -6,11 +6,20 @@ section#info-comp{
 section#info-comp ul{
     list-style: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 section#info-comp ul li{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: min-content;
+}
+
+section#info-comp ul li img{
+    max-width: 200px;
+    width: 50px;
 }

@@ -4,13 +4,19 @@ import './App.css'
 import { NavBar } from './navbar/NavBar'
 import { CaratulaComponent } from './caratula/CaratulaComponent'
 import { InfoComponent } from './info/InfoComponent'
+import { FooterComponent } from './footer/FooterComponent'
 
 function App() {
 
   const data = {
     tema:'Enfócate en las habilidades que necesitas reforzar',
     description:'Prepárate para alcanzar tus objetivos con profesores particulares',
-    items:[{name:'Item1'},{name:'Item3'}, {name:'Item2'}]
+    items:[
+      {name:'Item1', description:'no lo se rick', icon:reactLogo,},
+      {name:'Item3', description: 'no lo se rick 2', icon:reactLogo,},
+      {name:'Item2', icon:reactLogo, description:'idjsifjj asoidjoasijd oai djoasjdajdiajdoai jsd'},
+      {name:'Item4', icon:reactLogo, description:'idjsifjj asoidjoasijd oai djoasjdajdiajdoai jsd'}
+    ]
   }
 
   const pagos = {
@@ -24,6 +30,7 @@ function App() {
     <CaratulaComponent></CaratulaComponent>
     <InfoComponent contenido={data}/>
     <InfoComponent contenido={pagos}/>
+    <FooterComponent></FooterComponent>
     </>
   )
 }

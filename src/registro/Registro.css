@@ -1,0 +1,73 @@
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 3%;
+}
+
+form.registro{
+    background-color: rgb(148, 94, 202);
+    width: 17rem;
+    max-width: 17rem;
+    min-width: 13rem;
+}
+
+form.registro p{
+    margin: 0;
+    font-size: x-small;
+    align-self: flex-start;
+}
+
+form h2{
+    margin: 0 0 12px 0;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.form-group label{
+    align-self: self-start;
+}
+
+.form-group-of-groups{
+    display: flex;
+    flex-direction: row;
+}
+.form-group-of-groups .form-group:first-child{
+    padding-right: 2px;
+    width: 50%;
+}
+.form-group-of-groups .form-group:last-child{
+    padding-left: 2px;
+    width: 50%;
+}
+
+input{
+    font-size: medium;
+    padding: 3px 5px;
+}
+
+input::placeholder{
+    color: #fdfdfdec;
+}
+
+.form-group input{
+    background-color: unset;
+    border: 0;
+    border-bottom: 1px solid #c2c1c1ec;
+}
+
+.inputs [type=submit]{
+    margin-top: 20px;
+    padding: 12px 0;
+    background-color: blueviolet;
+    border-radius: 2px;
+    border: unset;
+    width: 100%;
+}
+
+.inputs [type=submit]:hover{
+    background-color: rgb(94, 28, 156);
+}

@@ -1,0 +1,16 @@
+section#info-comp{
+    border: 1px solid cornflowerblue;
+    
+}
+
+section#info-comp ul{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+section#info-comp ul li{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,122 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left: 0;
+    position: fixed;
+}
+
+div.navbar {
+    padding: 0 30px;
+    right: 0;
+    top: 0;
+    min-height: 54px;
+    background-color: antiquewhite;
+    box-shadow: 10px 5px 5px black;;
+}
+
+div.navbar ul{
+    list-style: none;
+    display: flex;
+    padding: 0 10px;
+    margin: 0;
+}
+
+div.navbar > ul:last-of-type{
+    position: fixed;
+    right: 0;
+}
+
+div.navbar ul li a{
+    display: block;
+    padding: 15px 20px;
+    text-transform: capitalize;
+}
+
+div.navbar ul li:hover{
+    background-color: #00000012;
+}
+
+.navToggler{
+    background-color: transparent;
+    width: 45px;
+    padding: 1px 3px;
+}
+
+.navToggler span{
+    background-color: black;
+    height: 5px;
+    display: block;
+    position: relative;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+
+
+.navToggler span:first-child{
+    top: 0;
+}
+
+
+@media (min-width:625px) {
+    .navToggler{
+        display: none;
+    }
+
+    div.sidebar{
+        display: none;
+    }
+}
+
+@media (max-width:625px) {
+    div.navbar > ul#menuItems,
+    div.navbar > ul#authItems li{
+        display: none;
+    }
+
+    div.sidebar {
+        transform: translateX(0rem);
+        transition: transform .3s ease-in-out;
+        right: unset;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+        width: 100%;
+        height: calc(100vh - 54px);
+        margin-top: 54px;
+    }
+
+    div.sidebar .bar{
+        display: flex;
+        width: 13rem;
+        height: 100%;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(153, 185, 185);
+        z-index: 10;
+    }
+
+    div.sidebar.translated{
+        transform: translateX(-13rem);
+        width: 0;
+    }
+
+    div.sidebar >div > ul{
+        flex-direction: column;
+        padding: 0 0;
+        width: 100%;
+    }
+
+    div.sidebar > div > ul:last-of-type{
+        bottom: 0;
+        left: 0;
+    }
+
+    .sideBarBack{
+        width: calc(100vw + 13rem);
+        height: 100%;
+        position: absolute;
+        background-color: #00000078;
+    }
+}

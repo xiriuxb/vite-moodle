@@ -33,6 +33,7 @@ function App() {
       <SideBar/>
       <NavBar></NavBar>
       <LandingPage></LandingPage>
+      <FooterComponent />
     </Provider>
   )
 }

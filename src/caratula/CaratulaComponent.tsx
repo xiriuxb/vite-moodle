@@ -9,11 +9,11 @@ export function CaratulaComponent(){
                 <h2 className="text-3xl md:text-4xl font-bold">Aprende con nosotros</h2>
                 <div>
                     <p className="text-2xl ">
-                        Explora nuestros 
+                        Explora nuestros&nbsp;
                         <a href="/" className="underline text-indigo-700">cursos</a>
                     </p>
                     <p className="text-2xl ">
-                        Y accede a ellos en nuestra 
+                        Y accede a ellos en nuestra&nbsp;
                         <a href="/" className="underline text-indigo-700">
                             aula&nbsp;
                             <span><i className="fas fa-external-link-alt text-base"></i></span>

@@ -1,24 +1,9 @@
-.caratula {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: darkcyan;
-    box-shadow: 10px 5px 5px black;;
+.caratula-bg{
+    background: linear-gradient(90deg, rgba(255,255,255,0.8939950980392157) 0%, rgba(81,107,208,0.3925945378151261) 80%, rgba(255,255,255,1) 100%);
 }
 
-.caratula > div{
-    display: flex;
-    flex-direction: column;
-}
-
-@media (max-width:625px){
-    .caratula{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left-side *{
-        margin: 10px 0;
+@media (max-width:768px) {
+    .caratula-bg{
+        background: linear-gradient(90deg, rgba(255,255,255,0.8939950980392157) 0%, rgba(81,107,208,0.3925945378151261) 50%, rgba(255,255,255,1) 100%);
     }
 }

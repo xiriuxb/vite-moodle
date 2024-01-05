@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/FooterComponent'
 import { SideBar } from './navbar/components/SideBar'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
+import { LandingPage } from './pages/LandingPage'
 
 function App() {
 
@@ -31,10 +32,7 @@ function App() {
     <Provider store={store}>
       <SideBar/>
       <NavBar></NavBar>
-      <CaratulaComponent></CaratulaComponent>
-      <InfoComponent contenido={data}/>
-      <InfoComponent contenido={pagos}/>
-      <FooterComponent></FooterComponent>
+      <LandingPage></LandingPage>
     </Provider>
   )
 }

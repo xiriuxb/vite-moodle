@@ -34,7 +34,7 @@ export function NavBar() {
             </a>
           </li>
           <li>
-            <a className="block py-3 px-5 capitalize bg-slate-100 text-indigo-700 rounded-xl" href="/#registro">
+            <a className="block py-2 px-5 capitalize bg-slate-100 text-indigo-700 rounded-xl" href="/#registro">
               Regístrese
             </a>
           </li>

@@ -18,17 +18,17 @@ export function SideBar() {
 
   return (
     <nav
-      className={`flex fixed top-0 bottom-0 p-0 mt-14 h-[100vh] sidebar ${
+      className={`flex fixed top-0 bottom-0 p-0 mt-14 font-bold sidebar ${
         !isSideVisible ? "translated" : ""
       }`}
     >
-      <div className="z-10 w-64 bg-slate-200 text-base text-indigo-700">
+      <div className="z-10 w-64 h-[100vh] bg-slate-200 text-base text-indigo-700">
         <ul id="menuItems">
           {menuItems.map((e) => (
             <li className="border-b-[1px] border-indigo-700" key={e.name}>
               <a className="w-full inline-block p-4 capitalize  hover:bg-indigo-700 hover:bg-opacity-10" href={e.link}>
                 {e.name}
-                {e.name == 'aula' && <span>&nbsp;&nbsp;<i className="fas fa-external-link-alt"></i></span>}
+                {e.name == 'aula' && <span>&nbsp;<i className="fas fa-external-link-alt"></i></span>}
               </a>
             </li>
           ))}

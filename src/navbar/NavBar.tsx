@@ -4,7 +4,7 @@ import { SearchInBarComponent } from "./components/SearchInBar";
 import { SideBarButtonComponent } from "./components/SideBarButton";
 export function NavBar() {
   return (
-    <nav className="flex justify-between fixed px-7 xl:px-36 min-h-14 w-full bg-indigo-700 text-base nav-shadow">
+    <nav className="flex justify-between fixed px-7 xl:px-36 min-h-14 w-full bg-indigo-700 text-base font-bold nav-shadow">
       <section className="flex w-1/4 md:w-1/3 min-w-fit">
         <a className="block py-4" href="/">
           Business Logo

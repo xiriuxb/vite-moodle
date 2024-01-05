@@ -5,6 +5,9 @@ import { NavBar } from './navbar/NavBar'
 import { CaratulaComponent } from './caratula/CaratulaComponent'
 import { InfoComponent } from './info/InfoComponent'
 import { FooterComponent } from './footer/FooterComponent'
+import { SideBar } from './navbar/components/SideBar'
+import { Provider } from 'react-redux'
+import { store } from './store/store'
 
 function App() {
 
@@ -25,13 +28,14 @@ function App() {
     items:[{name:'PayPal'},{name:'Depósito/Transferencia'}, {name:'Tarjeta de Crédito/Débito'}]
   }
   return (
-    <>
-    <NavBar></NavBar>
-    <CaratulaComponent></CaratulaComponent>
-    <InfoComponent contenido={data}/>
-    <InfoComponent contenido={pagos}/>
-    <FooterComponent></FooterComponent>
-    </>
+    <Provider store={store}>
+      <SideBar/>
+      <NavBar></NavBar>
+      <CaratulaComponent></CaratulaComponent>
+      <InfoComponent contenido={data}/>
+      <InfoComponent contenido={pagos}/>
+      <FooterComponent></FooterComponent>
+    </Provider>
   )
 }
 

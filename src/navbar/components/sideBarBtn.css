@@ -1,0 +1,15 @@
+#toggle-nav-btn span{
+    transition: all 0.3s ease-in-out ;
+}
+
+#toggle-nav-btn  span.first{
+    transform: translateY(8px) rotate(45deg)
+}
+
+#toggle-nav-btn  span.second{
+    transform: scale(0)
+}
+
+#toggle-nav-btn  span.last{
+    transform: translateY(-8px) rotate(-45deg) ;
+}

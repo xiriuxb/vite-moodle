@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavStore } from "../useNavStore";
 import menuItems from "../menuItems";
+import { Link } from "react-router-dom";
 export function SideBar() {
   const { isSideVisible, toggleSideBar } = useNavStore();
 
@@ -26,23 +27,23 @@ export function SideBar() {
         <ul id="menuItems">
           {menuItems.map((e) => (
             <li className="border-b-[1px] border-indigo-700" key={e.name}>
-              <a className="w-full inline-block p-4 capitalize  hover:bg-indigo-700 hover:bg-opacity-10" href={e.link}>
+              <Link className="w-full inline-block p-4 capitalize  hover:bg-indigo-700 hover:bg-opacity-10" to={e.link}>
                 {e.name}
                 {e.name == 'aula' && <span>&nbsp;<i className="fas fa-external-link-alt"></i></span>}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
         <ul className="py-2" id="authItems">
           <li className="p-1">
-            <a className="w-52 inline-block border-[1px] border-indigo-900 rounded-full py-3 hover:bg-indigo-200"  href="/">
+            <Link className="w-52 inline-block border-[1px] border-indigo-900 rounded-full py-3 hover:bg-indigo-200"  to="/auth/login">
                 Ingrese
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="w-52 inline-block bg-indigo-700 text-slate-200 border-[1px] border-indigo-900 rounded-full py-3 hover:bg-indigo-600" href="/#registro">
+            <Link className="w-52 inline-block bg-indigo-700 text-slate-200 border-[1px] border-indigo-900 rounded-full py-3 hover:bg-indigo-600" to="/#registro">
                 Regístrese
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

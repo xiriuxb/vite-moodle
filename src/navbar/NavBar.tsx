@@ -2,7 +2,12 @@ import "./NavBar.css";
 import menuItems from "./menuItems";
 import { SearchInBarComponent } from "./components/SearchInBar";
 import { SideBarButtonComponent } from "./components/SideBarButton";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 export function NavBar() {
+  useEffect(()=>{
+    console.log('me redibujo')
+  },[])
   return (
     <nav className="flex justify-between fixed px-7 xl:px-36 min-h-14 w-full bg-indigo-700 text-base font-bold nav-shadow">
       <section className="flex w-1/4 md:w-1/3 min-w-fit">
@@ -15,10 +20,10 @@ export function NavBar() {
               className=" hover:bg-opacity-30 hover:bg-slate-600 "
               key={e.name}
             >
-              <a className="block py-4 px-5 capitalize" href={e.link}>
+              <Link className="block py-4 px-5 capitalize" to={e.link}>
                 {e.name}
                 {e.name == 'aula' && <span>&nbsp;&nbsp;<i className="fas fa-external-link-alt"></i></span>}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -29,9 +34,9 @@ export function NavBar() {
       <section className="md:w-fit flex flex-row-reverse items-center">
         <ul id="authItems" className="hidden md:flex items-center">
           <li>
-            <a className="block py-4 px-5 capitalize" href="/">
+            <Link className="block py-4 px-5 capitalize" to="/auth/login">
               Ingrese
-            </a>
+            </Link>
           </li>
           <li>
             <a className="block py-2 px-5 capitalize bg-slate-100 text-indigo-700 rounded-xl" href="/#registro">

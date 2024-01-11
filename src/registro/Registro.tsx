@@ -10,7 +10,7 @@ export function RegistroComponent(){
     const handleRegSubmit:SubmitHandler<TRegisterInput> = (data:TRegisterInput)=>console.log(data,errors);
 
     return (
-        <form onSubmit={handleSubmit(handleRegSubmit)} className="bg-indigo-50 px-7 py-7 sm:px-10 max-w-96 text-slate-800 rounded-2xl" id='registro'>
+        <form onSubmit={handleSubmit(handleRegSubmit)} className="bg-indigo-50 px-7 py-7 sm:px-10 max-w-96 text-slate-800 rounded-2xl" aria-label='signup-form'>
             <h2 className='font-extrabold text-2xl mb-3'>Registro</h2>
             <div className='inputs'>
                 <div className='grid grid-cols-1 sm:grid-cols-2'>

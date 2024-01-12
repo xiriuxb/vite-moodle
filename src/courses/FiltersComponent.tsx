@@ -30,7 +30,7 @@ export function OrderByComponent({
         </div>
         <div className="plus-span">
           <div
-            className={`m-2 absolute h-[3px] w-[17px] rounded-lg origin-center bg-slate-200 transition-all duration-300 ${
+            className={`m-2 h-[3px] w-[17px] rounded-lg origin-center bg-slate-200 transition-all duration-300 ${
               !showItems ? "rotated" : ""
             }`}
           ></div>

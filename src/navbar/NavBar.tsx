@@ -2,18 +2,14 @@ import "./NavBar.css";
 import menuItems from "./menuItems";
 import { SearchInBarComponent } from "./components/SearchInBar";
 import { SideBarButtonComponent } from "./components/SideBarButton";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 export function NavBar() {
-  useEffect(()=>{
-    console.log('me redibujo')
-  },[])
   return (
-    <nav className="flex justify-between fixed px-7 xl:px-36 min-h-14 w-full bg-indigo-700 text-base font-bold nav-shadow">
+    <nav className="z-[100] flex justify-between fixed px-7 xl:px-36 min-h-14 w-full bg-indigo-700 text-base font-bold nav-shadow">
       <section className="flex w-1/4 md:w-1/3 min-w-fit">
-        <a className="block py-4" href="/">
+        <Link className="block py-4" to="/">
           Business Logo
-        </a>
+        </Link>
         <ul id="menuItems" className="px-2 hidden md:flex">
           {menuItems.map((e) => (
             <li
@@ -22,7 +18,11 @@ export function NavBar() {
             >
               <Link className="block py-4 px-5 capitalize" to={e.link}>
                 {e.name}
-                {e.name == 'aula' && <span>&nbsp;&nbsp;<i className="fas fa-external-link-alt"></i></span>}
+                {e.name == "aula" && (
+                  <span>
+                    &nbsp;&nbsp;<i className="fas fa-external-link-alt"></i>
+                  </span>
+                )}
               </Link>
             </li>
           ))}
@@ -39,7 +39,10 @@ export function NavBar() {
             </Link>
           </li>
           <li>
-            <a className="block py-2 px-5 capitalize bg-slate-100 text-indigo-700 rounded-xl" href="/#registro">
+            <a
+              className="block py-2 px-5 capitalize bg-slate-100 text-indigo-700 rounded-xl"
+              href="/#registro"
+            >
               Regístrese
             </a>
           </li>

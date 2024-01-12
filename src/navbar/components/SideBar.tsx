@@ -14,7 +14,7 @@ export function SideBar() {
 
   const updateWindowWidth = () => {
     //768 because of tailwind responsive value for md:
-      toggleSideBar(!!(window.innerWidth <= 768)&&isSideVisible);
+    toggleSideBar(!!(window.innerWidth <= 768) && isSideVisible);
   };
 
   return (
@@ -24,25 +24,44 @@ export function SideBar() {
       }`}
     >
       <div className="z-10 w-64 h-[100vh] bg-slate-200 text-base text-indigo-700">
-        <ul id="menuItems">
+        <ul id="menuItems" onClick={() => toggleSideBar(false)}>
           {menuItems.map((e) => (
             <li className="border-b-[1px] border-indigo-700" key={e.name}>
-              <Link className="w-full inline-block p-4 capitalize  hover:bg-indigo-700 hover:bg-opacity-10" to={e.link}>
+              <Link
+                className="w-full inline-block p-4 capitalize  hover:bg-indigo-700 hover:bg-opacity-10"
+                to={e.link}
+              >
                 {e.name}
-                {e.name == 'aula' && <span>&nbsp;<i className="fas fa-external-link-alt"></i></span>}
+                {e.name == "aula" && (
+                  <span>
+                    &nbsp;<i className="fas fa-external-link-alt"></i>
+                  </span>
+                )}
               </Link>
             </li>
           ))}
         </ul>
-        <ul className="py-2" id="authItems">
+        <ul
+          className="py-2"
+          id="authItems"
+          onClick={() => {
+            toggleSideBar(false);
+          }}
+        >
           <li className="p-1">
-            <Link className="w-52 inline-block border-[1px] border-indigo-900 rounded-full py-3 hover:bg-indigo-200"  to="/auth/login">
-                Ingrese
+            <Link
+              className="w-52 inline-block border-[1px] border-indigo-900 rounded-full py-3 hover:bg-indigo-200"
+              to="/auth/login"
+            >
+              Ingrese
             </Link>
           </li>
           <li>
-            <Link className="w-52 inline-block bg-indigo-700 text-slate-200 border-[1px] border-indigo-900 rounded-full py-3 hover:bg-indigo-600" to="/#registro">
-                Regístrese
+            <Link
+              className="w-52 inline-block bg-indigo-700 text-slate-200 border-[1px] border-indigo-900 rounded-full py-3 hover:bg-indigo-600"
+              to="/#registro"
+            >
+              Regístrese
             </Link>
           </li>
         </ul>

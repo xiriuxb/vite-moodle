@@ -17,6 +17,7 @@
   text-decoration: underline;
 }
 
-.plus-span .rotated {
-  transform: rotate(90deg);
+.rotated {
+  height: 17px !important;
+  width: 3px !important;
 }

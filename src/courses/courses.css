@@ -1,0 +1,22 @@
+.course-card:hover div:last-child {
+  border-color: #312e81;
+}
+
+.course-card:hover div:nth-child(2) {
+  border-top: 3px solid #312e81;
+}
+
+.course-card img {
+  transition: transform 0.3s ease-in-out;
+}
+.course-card:hover img {
+  transform: scale(1.1);
+}
+
+.course-card:hover span {
+  text-decoration: underline;
+}
+
+.plus-span .rotated {
+  transform: rotate(90deg);
+}
